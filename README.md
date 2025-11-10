@@ -2,12 +2,44 @@ Model Evaluation Summary
 The final machine learning model was evaluated on the test set using standard classification metrics. Here are the key results:
 
 1. Classification Report
-Precision	Recall	F1-score	Support
-0 (No cancer)	0.83	0.71	0.77	7
-1 (Cancer)	0.98	0.99	0.98	86
-Accuracy			0.97	93
-Macro avg	0.91	0.85	0.88	93
-Weighted avg	0.97	0.97	0.97	93
+For class 0 (No lung cancer):
+
+Precision: 0.83
+When the model predicts “no cancer,” it is correct 83% of the time.
+
+Recall: 0.71
+It correctly identifies 71% of actual non-cancer cases.
+
+F1-score: 0.77
+This combines precision and recall into one score (the harmonic mean).
+
+Support: 7
+There were 7 true cases in the test set for this class.
+
+For class 1 (Lung cancer):
+
+Precision: 0.98
+When the model predicts “cancer,” it is correct 98% of the time.
+
+Recall: 0.99
+It correctly identifies 99% of all lung cancer cases.
+
+F1-score: 0.98
+Indicates superb precision and recall balance.
+
+Support: 86
+There were 86 true cases in the test set for this class.
+
+Accuracy of the model:
+The overall accuracy is 0.97, meaning 97% of the predictions made by the model are correct across the test set.
+
+Macro average:
+Precision: 0.91, Recall: 0.85, F1-score: 0.88
+Macro average calculates the unweighted mean performance across both classes (treats them equally).
+
+Weighted average:
+Precision: 0.97, Recall: 0.97, F1-score: 0.97
+Weighted average considers the distribution of each class (so most of your test cases are cancer, hence high scores).
 
 2. Confusion Matrix:
 True Negatives (TN): 5 — Correctly predicted no cancer.
